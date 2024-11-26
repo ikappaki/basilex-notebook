@@ -1,0 +1,10 @@
+__pycache__/
+.clj-kondo/
+.lsp/
+.ipynb_checkpoints/
+
+\#*#
+.#*
+*~
+
+.nrepl-port

@@ -1,0 +1,6 @@
+(ns basapp.core)
+
+(defn hello []
+  (println :Hi \👋 "The Basilisp Kernel supports autocompletion of functions and variables using the Tab key ⌨️. Give it a go!"))
+
+
