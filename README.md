@@ -50,7 +50,7 @@ The [src/basapp/core.lpy](src/basapp/core.lpy) is in the python `sys.path` throu
 [1] (require '[basapp.core :as bc])
 
 [2] (bc/hello)
-:hi
+:Hi 👋 The Basilisp Kernel supports autocompletion of functions and variables using the Tab key ⌨️. Give it a go!
 ```
 
 > [!NOTE]
