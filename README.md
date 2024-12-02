@@ -55,6 +55,8 @@ The [src/basapp/core.lpy](src/basapp/core.lpy) path is automatically included in
 :Hi 👋 The Basilisp Kernel supports autocompletion of functions and variables using the Tab key ⌨️. Give it a go!
 ```
 
+![teaser](teaser.png)
+
 ## Start Developing Using the nREPL Server
 
 Refer to [Connecting Your Editor to the nREPL Server](https://github.com/ikappaki/basilex-notebook/wiki/Connecting-Your-Editor-to-the-nREPL-Server) for detailed instructions, covering various use cases.
@@ -101,7 +103,7 @@ To connect
 3. Enter the port number from the nREPL server output.
 
 
-You should now be connected to the Basilisp notebook from your editor. Follow the `dev.ipynb` nREPL sectio of the tutorial to explore and try out a few cool nREPL interactions.
+You should now be connected to the Basilisp notebook from your editor. Follow the `dev.ipynb` nREPL section of the tutorial to explore and try out a few cool nREPL interactions.
 
 ## Project Anatomy
 
