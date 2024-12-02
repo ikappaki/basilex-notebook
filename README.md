@@ -8,7 +8,9 @@ This repository helps you explore writing [Jupyter](https://jupyter.org/) Notebo
 
 It assumes you have some familiarity with [Clojure](https://clojure.org/guides/learn/clojure) and Jupyter Notebooks in Python.
 
-It leverages the Poetry build tool to create a Python virtual environment that includes both the `Jupyter Notebook` and the `basilisp-kernel` dependencies to get you started. Additionally, it includes a sample Basilisp Application library (`basapp`) that can be loaded into the development notebook.
+It leverages the Poetry build tool to create a Python virtual environment that includes both the `Jupyter Notebook` and the `basilisp-kernel` dependencies to get you started. 
+
+Additionally, it includes a sample Basilisp Application library (`basapp`) that can be loaded into the development notebook.
 
 ## Prerequisites
 
@@ -16,7 +18,7 @@ Ensure you have [Poetry](https://python-poetry.org/docs/) installed to manage th
 
 ## Project Setup
 
-First, clone the repo locally
+First, clone the repository locally
 ```
 git clone https://github.com/ikappaki/basilex-notebook.git
 ```
@@ -43,9 +45,9 @@ Then, start the Jupyter Notebook server
 jupyter notebook
 ```
 
-This should open the Jupyter Notebook home page in your browser. Open the `dev.ipynb` notebook to begin interacting with it.
+This should open the Jupyter Notebook home page in your browser. Open the `dev.ipynb` tutorial notebook to begin interacting with it.
 
-The [src/basapp/core.lpy](src/basapp/core.lpy) is in the python `sys.path` through `poetry install` run at project setup. You can require it in the Notebook as normal
+The [src/basapp/core.lpy](src/basapp/core.lpy) path is automatically included in the python `sys.path` through `poetry install` ran at project setup. You can require it in the notebooks as normal
 ```clojure
 [1] (require '[basapp.core :as bc])
 
@@ -53,16 +55,55 @@ The [src/basapp/core.lpy](src/basapp/core.lpy) is in the python `sys.path` throu
 :Hi 👋 The Basilisp Kernel supports autocompletion of functions and variables using the Tab key ⌨️. Give it a go!
 ```
 
-> [!NOTE]
-> You will need to restart the notebook kernel to pick up any changes to the `basapp` code after using `require`.
+![teaser](teaser.png)
 
-## REPL
+## Start Developing Using the nREPL Server
 
-You can acccess the Basilisp REPL from the command line as usual
+Refer to [Connecting Your Editor to the nREPL Server](https://github.com/ikappaki/basilex-notebook/wiki/Connecting-Your-Editor-to-the-nREPL-Server) for detailed instructions, covering various use cases.
+
+#### Start the nREPL server
+
+The following instructions are assumed to be executed in Notebook cells running the Basilisp Kernel, as indicated by the `[n]:` prefix.
+
+First load the nREPL server namespace
+
+```clojure
+[n]: (require '[basilisp-kernel.nrepl-server :as nrepl-server])
 ```
-$ basilisp repl
-basilisp.user=>
+
+Then, you can start the nREPL server
+
+- Specify a fixed port with `:port`
+```clojure
+[n]: (def server (server-start {:port 9998}))
+nREPL server started on port 9998 on host 127.0.0.1 - nrepl://127.0.0.1:9998
+#'user/server
 ```
+
+#### Connect to the nREPL Server
+
+Open the `basilisp.edn` file in the root of your project to enable Clojure-specific features in your editor.
+
+Then use your Editor's Clojure nREPL commands to connect to the server.
+
+Both [Emacs/CIDER](https://docs.cider.mx/cider/platforms/basilisp.html) and [VSCode/Calva](https://calva.io/basilisp/) offer explicit support for Basilisp.
+
+To connect
+
+##### CIDER (Emacs)
+
+1. Run `M-x cider-connect-clj`.
+2. Select `localhost`.
+3. Enter the port number from the nREPL server output.
+
+##### Calva (VSCode)
+
+1. Press `Ctrl-Shift-P` to open the Command Palette.
+2. Select `Calva: Connect to a Running REPL Server, not in your project`>`basilisp`.
+3. Enter the port number from the nREPL server output.
+
+
+You should now be connected to the Basilisp notebook from your editor. Follow the `dev.ipynb` nREPL section of the tutorial to explore and try out a few cool nREPL interactions.
 
 ## Project Anatomy
 
