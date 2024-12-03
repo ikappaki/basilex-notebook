@@ -24,7 +24,13 @@
   (display slider-widget))
 
 (comment
-  ;; Change the slider value in the dev notebook from your editor.
+  ;; Change the slider value in the tutorial notebook from your editor.
+  ;;
+  ;; Make sure you have evaluated the namespace before continuing.
+  ;;
+  ;; Emacs/CIDER : M-x cider-load-file
+  ;;
+  ;; VSCode/Calva: Calva: Load/Evaluate Current File and its Requires/Dependencies (i.e. Ctrl-Alt-C Enter)
 
   ;; Set to a new value
   (set! (. slider-wdg -value) 53)

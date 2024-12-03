@@ -9,7 +9,7 @@ packages = [{include = "basapp", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 notebook = "^7.2.2"
-basilisp-kernel = {git = "https://github.com/ikappaki/basilisp-kernel", rev = "6a6a97c0c287eae66cc889e0ce3c67c930b108b4"}
+basilisp-kernel = "^1.2.0"
 pandas = "^2.2.3"
 matplotlib = "^3.9.2"
 ipywidgets = "^8.1.5"
