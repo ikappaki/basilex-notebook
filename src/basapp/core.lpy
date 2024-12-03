@@ -20,7 +20,7 @@
    :style #py {"description_width" "initial"}))
 
 (defn slider []
-  (display (id/Markdown "📝 Open the `basilisp.edn` file in your Clojure Editor and connect to the nREPL port above ([💡guide](https://github.com/ikappaki/basilex-notebook/wiki/Connecting-Your-Editor-to-the-nREPL-Server)). Then, open `src/basapp/core.py` and adjust the slider value by evaluating the forms in the `comment` block."))
+  (display (id/Markdown "📝 Open the `basilisp.edn` file in your Clojure Editor and connect to the nREPL port above ([💡guide](https://github.com/ikappaki/basilex-notebook/wiki/Connecting-Your-Editor-to-the-nREPL-Server)). Then, open `src/basapp/core.lpy` and adjust the slider value by evaluating the forms in the `comment` block."))
   (display slider-widget))
 
 (comment
