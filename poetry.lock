@@ -198,12 +198,14 @@ pytest = ["pytest (>=7.0.0,<9.0.0)"]
 
 [[package]]
 name = "basilisp-kernel"
-version = "1.2.0b1"
+version = "1.2.0"
 description = "Basilisp kernel for Jupyter"
 optional = false
 python-versions = ">=3.9"
-files = []
-develop = false
+files = [
+    {file = "basilisp_kernel-1.2.0-py3-none-any.whl", hash = "sha256:3a751e5a0973afbc9e54f795ff4626dd2c0a0d603df52c201dd56317a647949b"},
+    {file = "basilisp_kernel-1.2.0.tar.gz", hash = "sha256:a3428b81d00040d3e8cdb6c45222d2cbef01ad05e16e354cb53df242bae5a1a5"},
+]
 
 [package.dependencies]
 basilisp = ">=0.3.2"
@@ -213,12 +215,6 @@ jupyter-client = "*"
 
 [package.extras]
 test = ["jupyter-kernel-test"]
-
-[package.source]
-type = "git"
-url = "https://github.com/ikappaki/basilisp-kernel"
-reference = "6a6a97c0c287eae66cc889e0ce3c67c930b108b4"
-resolved_reference = "6a6a97c0c287eae66cc889e0ce3c67c930b108b4"
 
 [[package]]
 name = "basilisp-nrepl-async"
@@ -3020,4 +3016,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "95472c270c424ca276c26d5cae3535b196783b603911345f61ccde0ff6dc07ae"
+content-hash = "03b246de1d99bc1eaef5c48690d316868f212d5e516e07463fe3b494da6037b4"
